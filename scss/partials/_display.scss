@@ -1,0 +1,74 @@
+@mixin blockRel {
+  display: block;
+  position: relative;
+}
+@mixin blockAb {
+  display: block;
+  position: absolute;
+}
+@mixin blockFix {
+  display: block;
+  position: fixed;
+}
+@mixin inlineRel {
+  display: inline-block;
+  position: relative;
+}
+.block-rel {
+  @include blockRel;
+}
+.inline-rel {
+  @include inlineRel;
+}
+.block-fix {
+  @include blockFix;
+}
+.block-ab {
+  @include blockAb;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+
+/*
+ * Size Based
+ */
+.hide {
+  display: none;
+}
+@media (min-width: $xs){
+  .xs_hide {
+    display: none;
+  }
+}
+@media (min-width: $sm){
+  .sm_hide {
+    display: none;
+  }
+}
+@media (min-width: $med){
+  .med_hide {
+    display: none;
+  }
+}
+@media (min-width: $lg){
+  .lg_hide {
+    display: none;
+  }
+}
+@media (min-width: $xl){
+  .xl_hide {
+    display: none;
+  }
+}
+@media (min-width: $xxl){
+  .xxl_hide {
+    display: none;
+  }
+}

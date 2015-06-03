@@ -1,0 +1,30 @@
+/*
+ * Globals
+ */
+html, body {
+	background-color: $c-2;
+	overflow: hidden;
+}
+.container {
+	@include blockRel;
+
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+}
+
+/*
+ * Elements
+ */ 
+.scroll {
+	@include blockRel;
+
+	min-height: 100vh;
+	max-width: 700px;
+	margin: 0 auto;
+	width: 100%;
+}
+.editor, .view {
+	min-height: 100vh;
+	max-width: 100%;
+}

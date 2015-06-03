@@ -1,0 +1,23 @@
+.bg-c-1 {
+	background-color: $c-1;
+}
+.bg-c-2 {
+	background-color: $c-2;
+}
+
+.bg-c-b {
+	background-color: $c-b;
+}
+
+/*
+ * Background Images
+ */
+.bg-cv-c {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bg-cn {
+	background-size: contain;
+	background-repeat: no-repeat;
+}

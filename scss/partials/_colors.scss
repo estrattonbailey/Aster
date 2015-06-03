@@ -1,0 +1,71 @@
+/*
+ * Colors
+ *
+ * Prefixed with 'c' followed by the color descriptor.
+ */
+
+// Primary Colors
+$c-1: #FDF6E4; // light yellow
+$c-2: #222A33; // deep gray blue
+$c-3: #3AC9E3; // blue link color
+
+// Darken
+$c-1d: darken($c-1, 10%);
+$c-2d: darken($c-2, 10%);
+
+// Lighten
+$c-1l: lighten($c-1, 5%);
+$c-2l: lighten($c-2, 20%);
+
+// Gray Scale
+$c-b: #111a1a; // set your black level - mine has a little blue in it
+$c-g: #333a3a;
+$c-g4: #666666; // 60% grayscale
+$c-g3: #999999; // 40% grayscale
+$c-g2: #cccccc; // 20% grayscale
+$c-g1: #f5f5f5; // 10% grayscale = "whitesmoke", for those curious
+
+// Color One
+.c-1 {
+	color: $c-1;
+}
+.c-1d {
+	color: $c-1d;
+}
+.c-1l {
+	color: $c-1l;
+}
+
+// Color Two
+.c-2 {
+	color: $c-2;
+}
+.c-2d {
+	color: $c-2d;
+}
+.c-2l {
+	color: $c-2l;
+}
+
+// Gray Scale
+.c-w {
+	color: #FFFFFF;
+}
+.c-b {
+	color: $c-b;
+}
+.c-g {
+	color: $c-g;
+}
+.c-g1 {
+	color: $c-g1;
+}
+.c-g2 {
+	color: $c-g2;
+}
+.c-g3 {
+	color: $c-g3;
+}
+.c-g4 {
+	color: $c-g4;
+}

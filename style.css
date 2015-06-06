@@ -1718,14 +1718,14 @@ html, body {
   color: #222A33; }
 
 .f-1 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif; }
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif; }
 
 .f-2 {
   font-family: Consolas , Monaco, monospace; }
 
 h1,
 .h1 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 3.2rem;
   font-weight: 900;
   line-height: 4rem;
@@ -1739,7 +1739,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: 900;
   line-height: 3.3rem;
@@ -1752,7 +1752,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   font-weight: 900;
   line-height: 3rem;
@@ -1765,7 +1765,7 @@ h3,
 
 h4,
 .h4 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 900;
   line-height: 3rem;
@@ -1773,7 +1773,7 @@ h4,
 
 h5,
 .h5 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 2rem;
@@ -1781,7 +1781,7 @@ h5,
 
 h6,
 .h6 {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 900;
   line-height: 1.8rem;
@@ -1789,7 +1789,7 @@ h6,
 
 p,
 .p {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 100;
   line-height: 2.6rem;
@@ -1823,13 +1823,13 @@ ul, ol {
   padding: 0 0 0 3rem; }
 
 li {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 100;
   line-height: 2.6rem; }
 
 pre {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 100;
   line-height: 2.6rem;
@@ -1859,7 +1859,7 @@ figure {
     height: auto !important;
     width: 100%; }
   figure figcaption {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: 900;
     line-height: 2rem;
@@ -1960,7 +1960,7 @@ hr {
   color: rgba(255, 255, 255, 0.6); }
 
 input {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   font-weight: 900;
   line-height: 3rem;
@@ -1975,7 +1975,7 @@ input {
     color: #FFFFFF !important; }
 
 textarea {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Museo Sans", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 100;
   line-height: 2.6rem;

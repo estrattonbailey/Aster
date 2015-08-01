@@ -1,45 +1,56 @@
 <!DOCTYPE html>
+<html>
 <head>
-	<link rel="icon" type="image/png" href="assets/favicon.png"/>
-
 	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<meta name="author" content="Eric Bailey">
-	<meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<meta name="keywords" content="distraction free writing"/>
-	<meta name="description" content="A little markdown editor for your browser."/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="keywords" content="markdown editor, markdown, note taking, noisli, evernote, notebad, meeting notes, local storage, offline, note taking"/>
+	<meta name="description" content="A tiny markdown editor in your browser, where everything you type is saved securely for offline use."/>
+
+	<!-- Icons -->
+	<link rel="icon" type="image/png" href="assets/favicon.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/icons/apple-touch-icon-precomposed.png"><!-- 57×57px -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/apple-touch-icon-76x76-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/apple-touch-icon-120x120-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/apple-touch-icon-152x152-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="assets/apple-touch-icon-180x180-precomposed.png">
+	<link rel="icon" sizes="192x192" href="assets/touch-icon-192x192.png">
 
 	<!-- Open Graph data -->
-	<meta prefix="og: http://ogp.me/ns#" property="og:description" content="A little markdown editor for your browser."/>
-	<meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Markd"/>
-	<meta prefix="og: http://ogp.me/ns#" property="og:title" content="Markd" />
-	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="./assets/og_img.png" />
-	<meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://estrattonbailey.github.io/markd" />
+	<meta prefix="og: http://ogp.me/ns#" property="og:description" content="A tiny markdown editor in your browser, where everything you type is saved securely for offline use."/>
+	<meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Aster"/>
+	<meta prefix="og: http://ogp.me/ns#" property="og:title" content="Aster | A tiny markdown editor in your browser." />
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="assets/og_img.png" />
+	<meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://estrattonbailey.github.io/Aster" />
 
-	<!-- jQuery - Google and hosted for local dev -->
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="./js/jquery.min.js"></script>-->
-	<script src="https://cdn.firebase.com/js/client/2.2.5/firebase.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 
-	<link rel="stylesheet" type="text/css" href="./style.css"/>
-
-	<title>Markd</title>
-
+	<title>Aster | A tiny markdown editor in your browser.</title>
 </head>
 <body>
-	<section class="container">
-		<div class="bg-c-2 col s12">
-			<div class="scroll">
-				<textarea autofocus="true" class="block-rel f-2 c-w editor ph-lg pv-lg js-editor" placeholder="Use this field to write whatever you like. It supports markdown!"></textarea>
+	<main class="container block">
+		<div class="pane__left pane is-active block-absolute">
+			<div class="pane__inner block-relative">
+				<div class="pane__scroll block-relative">
+					<textarea id="Editor" class="pane__content type-monospace block-relative" autofocus="true" placeholder="Begin by typing something here..."></textarea>
+				</div>
 			</div>
 		</div>
-		<div class="bg-c-1 col s12">
-			<div class="scroll">
-				<div class="block-rel view p-lg js-view"></div>
+		<div class="pane__right pane block-absolute">
+			<div class="pane__inner block-relative">
+				<div class="pane__scroll block-relative">
+					<div id="View" class="pane__content block-relative rte p"></div>
+				</div>
 			</div>
 		</div>
-	</section>
+	</main>
 
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>

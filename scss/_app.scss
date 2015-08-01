@@ -1,0 +1,90 @@
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+.container {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.pane {
+	background-color: color(g1);
+	height: 100%;
+	width: 66.666666%;
+	top: 0;
+	bottom: 0;
+
+	.pane__content {
+		cursor: pointer;
+		opacity: .4;
+	}
+}
+.pane__left {
+	left: 0;
+	right: 33.333333%;
+	transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+	transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+		-webkit-transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+		-moz-transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+		-ms-transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+
+	&.is-active {
+		background-color: color(w);
+		transform: translateX(0);
+
+		.pane__content {
+			cursor: text;
+			opacity: 1;
+		}
+	}
+}
+.pane__right {
+	right: 0;
+	left: 33.333333%;
+	transform: translateX(50%);
+		-webkit-transform: translateX(50%);
+		-moz-transform: translateX(50%);
+		-ms-transform: translateX(50%);
+	transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+		-webkit-transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+		-moz-transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+		-ms-transition: transform .3s ease-in-out, background-color .3s ease-in-out, opacity .3s ease-in-out;
+
+	&.is-active {
+		background-color: color(w);
+		transform: translateX(0);
+
+		.pane__content {
+			cursor: text;
+			opacity: 1;
+		}
+	}
+}
+
+.pane__inner {
+	bottom: 0; left: 0; right: 0; top: 0;
+	overflow: auto;
+	height: 100%;
+}
+.pane__scroll {
+	height: 100%;
+}
+
+.pane__content {
+	padding: s(xl);
+	min-height: 100%;
+}
+textarea.pane__content {
+	border: 0;
+	border-radius: 0;
+	resize: none;
+	transition: color .3s ease-in-out;
+		-webkit-transition: color .3s ease-in-out;
+		-moz-transition: color .3s ease-in-out;
+		-ms-transition: color .3s ease-in-out;
+}

@@ -1,11 +1,9 @@
-var FB = new Firebase("https://radiant-fire-7603.firebaseio.com/noislier/testing");
-
 jQuery(function($){
 
-	var Editor = $('.js-editor'),
-		View = $('.js-view'),
-		Storage = localStorage.getItem('the_content') !== '' ? localStorage.getItem('the_content') : '',
-		App = {
+	var Editor = $('#Editor'),
+		View = $('#View'),
+		Storage = localStorage.getItem('aster_content') !== '' ? localStorage.getItem('aster_content') : '',
+		Aster = {
 			init: function(){
 				Reqs.markdown();
 				Reqs.highlight();
@@ -15,29 +13,29 @@ jQuery(function($){
 			},
 			bindings: function(){
 				Editor.on('keyup', 
-					App.throttle(function(event){
+					Aster.throttle(function(event){
 						$('body').trigger('updated:editor');
 				}, 1000));
 			},
 			getStorage: function(){
 				if (Storage !== null) {
-					var content = localStorage.getItem('the_content');
+					var content = localStorage.getItem('aster_content');
 
-					App.updateView( marked(content) );
+					Aster.updateView( marked(content) );
 					Editor.prop('value', content);
 
-					App.addStorage();
+					Aster.addStorage();
 				} else {
-					App.addStorage();
+					Aster.addStorage();
 				}
 			},
 			addStorage: function(){
 				$('body').on('updated:editor', function(){
 					var content = Editor.prop('value');
 
-					localStorage.setItem('the_content', content);
+					localStorage.setItem('aster_content', content);
 
-					App.updateView(content);
+					Aster.updateView(content);
 				});
 			},
 			updateView: function(data){
@@ -77,13 +75,30 @@ jQuery(function($){
 			}
 		}
 
-	var Firebase = {
+	var DOM = {
 		init: function(){
-			FB.set({
-				app: {
-					content: 'Hello world!'
-				}	
+			this.panes();
+		},
+		panes: function(){
+			var panes = $('.pane');
+
+			DOM.title(); // set title
+
+			panes.on('click', function(){
+				if ($(this).hasClass('is-active')) {
+					return;
+				} else {
+					panes.toggleClass('is-active');
+					DOM.title();
+				}
 			});
+		},
+		title: function(){
+			if ($('.pane__left').hasClass('is-active')){
+				document.title = 'Aster | Editing';
+			} else if ($('.pane__right').hasClass('is-active')) {
+				document.title = 'Aster | Viewing';
+			}
 		}
 	}
 
@@ -101,6 +116,6 @@ jQuery(function($){
 		}
 	}
 
-	App.init();
-	Firebase.init();
+	Aster.init();
+	DOM.init();
 });

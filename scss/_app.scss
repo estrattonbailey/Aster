@@ -9,6 +9,7 @@ body {
 	width: 100%;
 }
 
+// PANELS
 .pane {
 	background-color: color(g1);
 	height: 100%;
@@ -65,7 +66,6 @@ body {
 		}
 	}
 }
-
 .pane__inner {
 	bottom: 0; left: 0; right: 0; top: 0;
 	overflow: auto;
@@ -74,7 +74,6 @@ body {
 .pane__scroll {
 	height: 100%;
 }
-
 .pane__content {
 	padding: s(xl);
 	min-height: 100%;
@@ -87,4 +86,14 @@ textarea.pane__content {
 		-webkit-transition: color .3s ease-in-out;
 		-moz-transition: color .3s ease-in-out;
 		-ms-transition: color .3s ease-in-out;
+}
+
+// STYLES
+._code.rte {
+	.hljs {
+		background-color: transparent;
+	}
+	pre {
+		background-color: color(g1);
+	}
 }

@@ -32,10 +32,39 @@
 
 	<title>Aster | A tiny markdown editor in your browser.</title>
 </head>
-<body>
-	<main class="container block">
+<body style="opacity: 0">
+	<div class="progress-container block-absolute s1">
+		<div class="js-progress progress-bar block-relative"></div>
+	</div>
+
+	<div class="js-dropzone overlay--dropzone block-absolute u-middle-align-helper align-c">
+		<div class="inline-block align-m"><h2 class="font-w-b c-theme">drop file here</h2></div>
+	</div>
+	<div class="js-overlay--new-file js-overlay overlay--new-file block-absolute u-middle-align-helper align-c c-w">
+		<div class="js-closeOverlay overlay__close block-absolute"><i class="icon-close"></i></div>
+		<div class="new-file inline-block align-m s13">
+			<form class="js-new_form block-relative">
+				<input class="js-new_post_title new-file__title block-relative s1 h2 font-w-b c-w" type="text" placeholder="Title">
+				<textarea class="js-new_post_tags new-file__tags block-relative s1 c-w" placeholder="Add tags, separated by a comma."></textarea>
+			</form>
+		</div>
+	</div>
+
+	<div class="menu container block-absolute s13 bg-c-g1">
+		<div class="menu__inner block-relative">
+			
+		</div>
+	</div>
+
+	<main class="app-wrapper container s1 block">
 		<div class="pane__left pane is-active block-absolute">
 			<div class="pane__inner block-relative">
+				<div class="js-buttons app-buttons block-absolute">
+					<a class="js-menu app-button block-relative float-l" href="#0"><i class="icon-three-bars"></i></a>
+					<a class="js-new_toggle app-button block-relative float-l" href="#0"><i class="icon-diff-added"></i></a>
+					<!-- <a class="app-button block-relative float-r" href="#0" target="_blank"><i class="icon-github"></i></a> -->
+					<a class="app-button block-relative float-r" href="#0"><i class="icon-info"></i></a>
+				</div>
 				<div class="pane__scroll block-relative">
 					<textarea id="Editor" class="pane__content type-monospace block-relative" autofocus="true" placeholder="Begin by typing something here..."></textarea>
 				</div>
@@ -43,6 +72,9 @@
 		</div>
 		<div class="pane__right pane block-absolute">
 			<div class="pane__inner block-relative">
+				<div class="js-buttons app-buttons block-absolute are-hidden">
+					<a class="js-download app-button block-relative float-r" href="#0"><i class="icon-cloud-download"></i></a>
+				</div>
 				<div class="pane__scroll block-relative">
 					<div id="View" class="pane__content block-relative rte p _code"></div>
 				</div>
@@ -51,6 +83,7 @@
 	</main>
 
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/modernizr.js"></script>
 	<script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>
